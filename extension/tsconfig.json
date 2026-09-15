@@ -1,0 +1,27 @@
+{
+    "extends": "./.wxt/tsconfig.json",
+    "compilerOptions": {
+        "target": "ES2022",
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "strict": true,
+        "skipLibCheck": true,
+        "types": ["chrome", "vitest/globals"],
+        "isolatedModules": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "jsx": "react-jsx"
+    },
+    "include": [
+        "entrypoints/**/*.ts",
+        "entrypoints/**/*.tsx",
+        "tests/**/*.ts",
+        "tests/**/*.tsx",
+        "wxt.config.ts",
+        "vitest.config.ts",
+        ".wxt/types/**/*.d.ts"
+    ],
+    "exclude": ["node_modules", ".output"]
+}

@@ -1,0 +1,10 @@
+packages:
+    - .
+
+# esbuild needs its postinstall to fetch the platform binary. Everything else
+# is denied explicitly so pnpm 11 doesn't scaffold a placeholder block.
+onlyBuiltDependencies:
+    - esbuild
+allowBuilds:
+    esbuild: true
+    spawn-sync: false
